@@ -1,0 +1,17 @@
+nav ul{
+  display: flex;
+  text-align: center;
+}
+ul li{
+  flex-grow: 1;
+  list-style: none;
+  border-right: 1px solid gray;
+}
+ul li:last-child{
+  border-right: none;
+}
+li a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
