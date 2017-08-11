@@ -15,3 +15,50 @@ li a{
   font-size: 20px;
   font-weight: 400;
 }
+div img{
+  width: 100%;
+}
+.post{
+  border: 1px solid lightgray;
+}
+.ins_username{
+  color: gray;
+  font-size: 15px;
+  padding: 10px 10px 20px 0px;
+  font-weight: 700;
+}
+.tw_username{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color:gray;
+  padding:10px 0px 20px 0px;
+}
+.tweet{
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
+.linkTxt{
+  color:red;
+  padding-top: 10px;
+  font-size: 15px;
+}
+.text{
+  padding-top: 10px;
+  font-size: 15px;
+  color:gray;
+}
+.firstStr{
+  color: gray;
+}
+.secondStr{
+  color: red;
+}
+@media screen and (min-width: 420px){
+  .col-sm-4 {
+      width: 31% !important;
+      margin: 1% !important;
+      padding: 10px;
+  }
+}
