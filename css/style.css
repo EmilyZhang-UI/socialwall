@@ -1,6 +1,7 @@
 nav ul{
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
 }
 ul li{
   flex-grow: 1;
@@ -65,10 +66,20 @@ div img{
 .formatUrl:hover{
   text-decoration: none;
 }
-@media screen and (min-width: 420px){
-  .col-sm-4 {
-      width: 31% !important;
-      margin: 1% !important;
-      padding: 10px;
+.grid_item {
+    width: 32%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+    float: left;
+}
+@media screen and (max-width: 768px){
+  .grid_item {
+    width: 96%;
+    margin: 2%;
+    padding: 10px;
+  }
+  ul li{
+    width: 100%;
   }
 }

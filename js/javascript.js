@@ -16,19 +16,19 @@ function createPost(items){
   items.forEach(function(ele,index){
     switch (ele.service_name) {
       case "Manual":
-        var text = "<div class='post col-xs-12 col-sm-4 col-md-4'><div><a href='"+ele.item_data.link+"' target='_blank'>"
+        var text = "<div class='post grid_item'><div><a href='"+ele.item_data.link+"' target='_blank'>"
         +"<img src='"+ele.item_data.image_url+"'/></a></div><div class='text'>"+ele.item_data.text
         +"</div><a href='"+ele.item_data.link+"' target='_blank'><div class='linkTxt'>"
         +ele.item_data.link_text+"</div></a></div>";
         break;
       case "Twitter":
         var tweet = format_characters(ele.item_data.tweet);
-        var text = "<div class='post col-xs-12 col-sm-4 col-md-4'><div class='tw_username'>"+ele.item_data.user.username+"</div>"
+        var text = "<div class='post grid_item'><div class='tw_username'>"+ele.item_data.user.username+"</div>"
         + "<div class='tweet'>"+format_url(tweet)+"</div></div>";
         console.log(text);
         break;
       case "Instagram":
-        var text = "<div class='post col-xs-12 col-sm-4 col-md-4'><div><a href='"+ele.item_data.link+"' target='_blank'><img src='"+ele.item_data.image.large+"'/></a>"
+        var text = "<div class='post grid_item'><div><a href='"+ele.item_data.link+"' target='_blank'><img src='"+ele.item_data.image.large+"'/></a>"
         + "</div><div class='ins_username'>"+ele.item_data.user.username+"</div>"
         +"<div class='firstStr'>"+splitStr(ele.item_data.caption).first_str+"</div>"
         +"<div class='secondStr'>"+splitStr(ele.item_data.caption).second_str+"</div></div>";
@@ -158,3 +158,9 @@ function filterByName(e){
   posts_list.innerHTML = "";
   createPost(array);
 }
+$('#posts_list').infiniteScroll({
+  // options
+  path: '.pagination__next',
+  append: '.post',
+  history: false,
+});
