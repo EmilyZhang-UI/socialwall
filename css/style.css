@@ -11,9 +11,13 @@ ul li:last-child{
   border-right: none;
 }
 li a{
-  text-decoration: none;
   font-size: 20px;
   font-weight: 400;
+  color: black;
+}
+li a:hover{
+  text-decoration: none;
+  color:black;
 }
 div img{
   width: 100%;
@@ -54,6 +58,12 @@ div img{
 }
 .secondStr{
   color: red;
+}
+.formatChar,.formatUrl{
+  color:red;
+}
+.formatUrl:hover{
+  text-decoration: none;
 }
 @media screen and (min-width: 420px){
   .col-sm-4 {
